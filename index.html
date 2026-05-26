@@ -147,11 +147,11 @@ nav.scrolled .nav-phone:hover{background:var(--gold-light);border-color:var(--go
 #services{background:var(--near-black)}
 .services-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:5rem}
 @media(max-width:768px){.services-header{grid-template-columns:1fr;gap:2rem}}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border)}
-.service-card{background:var(--gold);color:var(--charcoal);padding:3rem 2.5rem;transition:var(--transition);cursor:default;position:relative;overflow:hidden}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;background:transparent}
+.service-card{background:var(--gold);color:var(--charcoal);padding:3rem 2.5rem;transition:var(--transition);cursor:default;position:relative;overflow:hidden;border-radius:12px;box-shadow:0 15px 35px rgba(0,0,0,0.08)}
 .service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--charcoal);transition:width 0.5s ease}
 .service-card:hover::before{width:100%}
-.service-card:hover{background:var(--gold-light)}
+.service-card:hover{background:var(--gold-light);transform:translateY(-8px);box-shadow:0 25px 50px rgba(185,28,28,0.2)}
 .service-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;color:rgba(255,255,255,0.25);line-height:1;margin-bottom:1.5rem;display:block}
 .service-icon-wrap{width:3rem;height:3rem;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
 .service-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;margin-bottom:1rem;line-height:1.2;color:#ffffff;}
@@ -264,7 +264,8 @@ nav.scrolled .nav-phone:hover{background:var(--gold-light);border-color:var(--go
    ===================== */
 #testimonials{background:var(--dark-surface)}
 .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:4rem}
-.testimonial-card{background:var(--gold);padding:2.5rem;border:none;position:relative;border-radius:12px;}
+.testimonial-card{background:var(--gold);padding:2.5rem;border:none;position:relative;border-radius:12px;transition:all 0.4s ease;box-shadow:0 15px 35px rgba(0,0,0,0.1)}
+.testimonial-card:hover{transform:translateY(-5px);box-shadow:0 25px 50px rgba(185,28,28,0.25)}
 .testimonial-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:6rem;color:rgba(255,255,255,0.2);position:absolute;top:-1rem;left:1.5rem;line-height:1}
 .stars{display:flex;gap:0.25rem;margin-bottom:1.5rem}
 .star{color:#ffffff;font-size:0.9rem}
@@ -355,16 +356,69 @@ nav.scrolled .nav-phone:hover{background:var(--gold-light);border-color:var(--go
 /* =====================
    FAQ
    ===================== */
-#faq{background:var(--charcoal)}
-.faq-list{margin-top:4rem;border-top:1px solid var(--border)}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-q{width:100%;background:none;border:none;color:var(--white);text-align:left;padding:2rem 0;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:400;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:2rem;transition:color 0.3s}
-.faq-q:hover{color:var(--gold-light)}
-.faq-q .faq-icon{width:1.5rem;height:1.5rem;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;transition:transform 0.3s,border-color 0.3s}
-.faq-item.open .faq-q .faq-icon{transform:rotate(45deg);border-color:var(--gold)}
-.faq-item.open .faq-q{color:var(--gold-light)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s}
-.faq-a-inner{padding-bottom:2rem;color:var(--text-muted);line-height:1.8;font-size:0.95rem;max-width:720px}
+#faq {
+  background: #1c1917 !important;
+  padding: 8rem 0;
+  color: #ffffff;
+}
+.faq-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.faq-header p {
+  color: var(--gold);
+}
+.faq-header h2 {
+  color: #ffffff !important;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.faq-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.faq-question {
+  list-style: none;
+  cursor: pointer;
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  color: #ffffff;
+}
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+.faq-question:hover {
+  color: var(--gold);
+}
+.faq-icon {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--gold);
+  transition: transform 0.4s ease;
+}
+details[open] .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-answer {
+  padding-bottom: 2.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  font-family: 'DM Sans', sans-serif;
+  animation: faq-slide-down 0.4s ease-out;
+  padding-right: 2rem;
+}
+@keyframes faq-slide-down {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
 /* =====================
    CONTACT / QUOTE FORM
@@ -386,6 +440,8 @@ nav.scrolled .nav-phone:hover{background:var(--gold-light);border-color:var(--go
 .form-group textarea{resize:vertical;min-height:120px}
 .form-group select option{background:var(--charcoal);color:var(--white)}
 .form-note{font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem}
+
+
 
 /* =====================
    FINAL CTA
@@ -565,7 +621,7 @@ footer{background:#000000 !important;border-top:1px solid rgba(255,255,255,0.1);
           </div>
         </div>
       </div>
-      <div class="hero-form reveal reveal-delay-4" style="background:var(--charcoal); padding: 1rem; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+      <div class="hero-form reveal reveal-delay-4" style="background:var(--charcoal); padding: 1rem; border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.15), 0 0 40px rgba(185,28,28,0.08);">
         <iframe
             src="https://api.leadconnectorhq.com/widget/form/c6PhTj3obI1V4iMwAUU5"
             style="width:100%;border:none;border-radius:3px;min-height:580px;"
@@ -947,108 +1003,92 @@ footer{background:#000000 !important;border-top:1px solid rgba(255,255,255,0.1);
 
 <!-- ========== FAQ ========== -->
 <section id="faq" aria-labelledby="faq-heading">
-  <div class="container" style="max-width:900px">
-    <p class="overline reveal">Common Questions</p>
-    <h2 id="faq-heading" class="display display-md reveal reveal-delay-1">Questions &<br>Answers.</h2>
-
-    <div class="faq-list reveal reveal-delay-2" role="list">
-
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+  <div class="container">
+    <div class="faq-header">
+      <p class="overline reveal">Common Questions</p>
+      <h2 id="faq-heading" class="display display-md reveal reveal-delay-1">Questions &<br>Answers.</h2>
+    </div>
+    
+    <div class="faq-grid reveal reveal-delay-2" style="max-width: 800px; margin: 0 auto;">
+      <details class="faq-item">
+        <summary class="faq-question">
           What areas of Toronto does Decora service?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-1" role="region">
-          <div class="faq-a-inner">
-            Decora serves the entire Greater Toronto Area including Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Markham, Richmond Hill, Vaughan, Oakville, and surrounding municipalities. For large projects, we also work across Southern Ontario.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>Decora serves the entire Greater Toronto Area including Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Markham, Richmond Hill, Vaughan, Oakville, and surrounding municipalities. For large projects, we also work across Southern Ontario.</p>
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+      <details class="faq-item">
+        <summary class="faq-question">
           How do I get a quote for a building restoration project?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-2" role="region">
-          <div class="faq-a-inner">
-            Start by calling us at 416-285-7788 or submitting the quote request form on this page. We'll schedule a no-obligation site assessment, evaluate the scope, and provide a detailed written proposal. For condo corporations, we can provide documentation suitable for board review and engineering consultation.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>Start by calling us at 416-285-7788 or submitting the quote request form on this page. We'll schedule a no-obligation site assessment, evaluate the scope, and provide a detailed written proposal. For condo corporations, we can provide documentation suitable for board review and engineering consultation.</p>
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+      <details class="faq-item">
+        <summary class="faq-question">
           Are you insured and WSIB compliant?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-3" role="region">
-          <div class="faq-a-inner">
-            Yes. Decora Building Restoration is fully insured with comprehensive general liability coverage and is WSIB compliant. We can provide certificates of insurance and WSIB clearance certificates upon request — standard on any project.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes. Decora Building Restoration is fully insured with comprehensive general liability coverage and is WSIB compliant. We can provide certificates of insurance and WSIB clearance certificates upon request — standard on any project.</p>
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+      <details class="faq-item">
+        <summary class="faq-question">
           Can Decora work with our building's engineering consultant?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-4" role="region">
-          <div class="faq-a-inner">
-            Absolutely — this is standard on most projects. We regularly work alongside structural and building envelope engineers, coordinating scopes, submittals, and inspections. If your property manager or condo board is working with a consulting engineer, we can integrate into that process smoothly.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>Absolutely — this is standard on most projects. We regularly work alongside structural and building envelope engineers, coordinating scopes, submittals, and inspections. If your property manager or condo board is working with a consulting engineer, we can integrate into that process smoothly.</p>
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
+      <details class="faq-item">
+        <summary class="faq-question">
           How long does a typical balcony restoration project take?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-5" role="region">
-          <div class="faq-a-inner">
-            It depends on the building size, scope, and weather conditions. A typical mid-rise with 80–120 balconies can be completed in 8–14 weeks of active work. We sequence work to minimize disruption to individual units and communicate proactively with property managers throughout.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>It depends on the building size, scope, and weather conditions. A typical mid-rise with 80–120 balconies can be completed in 8–14 weeks of active work. We sequence work to minimize disruption to individual units and communicate proactively with property managers throughout.</p>
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
+      <details class="faq-item">
+        <summary class="faq-question">
           What is building envelope restoration?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-6" role="region">
-          <div class="faq-a-inner">
-            The building envelope is everything that separates the interior of your building from the outside — walls, windows, roofline, cladding, sealants, and waterproofing membranes. Envelope restoration involves repairing or replacing these systems to stop water infiltration, maintain structural integrity, and improve energy performance. It's one of the most critical investments a building owner or condo corporation can make.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>The building envelope is everything that separates the interior of your building from the outside — walls, windows, roofline, cladding, sealants, and waterproofing membranes. Envelope restoration involves repairing or replacing these systems to stop water infiltration, maintain structural integrity, and improve energy performance. It's one of the most critical investments a building owner or condo corporation can make.</p>
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-7">
+      <details class="faq-item">
+        <summary class="faq-question">
           Do you handle parking garage restoration for underground garages?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-7" role="region">
-          <div class="faq-a-inner">
-            Yes. Underground parking garage rehabilitation is one of our core specialties. This includes concrete slab repairs, column and beam repairs, post-tensioned slab work, waterproofing membrane installation, drainage system upgrades, and traffic deck coatings. We've completed these projects for commercial clients, condo corporations, and municipal facilities.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>Yes. Underground parking garage rehabilitation is one of our core specialties. This includes concrete slab repairs, column and beam repairs, post-tensioned slab work, waterproofing membrane installation, drainage system upgrades, and traffic deck coatings. We've completed these projects for commercial clients, condo corporations, and municipal facilities.</p>
         </div>
-      </div>
+      </details>
 
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-8">
+      <details class="faq-item">
+        <summary class="faq-question">
           Do you offer winter restoration work?
           <span class="faq-icon" aria-hidden="true">+</span>
-        </button>
-        <div class="faq-a" id="faq-a-8" role="region">
-          <div class="faq-a-inner">
-            Some restoration work can be performed year-round; other scopes — particularly those involving concrete pours, membrane installation, or masonry pointing — have temperature sensitivities. We'll give you an honest assessment of what can proceed and when, and we can schedule post-winter inspections to plan your spring/summer program proactively.
-          </div>
+        </summary>
+        <div class="faq-answer">
+          <p>Some restoration work can be performed year-round; other scopes — particularly those involving concrete pours, membrane installation, or masonry pointing — have temperature sensitivities. We'll give you an honest assessment of what can proceed and when, and we can schedule post-winter inspections to plan your spring/summer program proactively.</p>
         </div>
-      </div>
-
+      </details>
     </div>
   </div>
 </section>
@@ -1098,11 +1138,13 @@ footer{background:#000000 !important;border-top:1px solid rgba(255,255,255,0.1);
 <!-- ========== CONTACT & QUOTE FORM ========== -->
 <section id="contact" aria-labelledby="contact-heading">
   <div class="container">
-    <p class="overline reveal">Get In Touch</p>
-    <h2 id="contact-heading" class="display display-md reveal reveal-delay-1">Request Your Free<br>Site Assessment.</h2>
-    <p style="color:var(--text-muted);margin-top:0.75rem;font-size:0.95rem;max-width:500px" class="reveal reveal-delay-2">
-      Fill in the form below or call us directly. We respond to all inquiries within one business day.
-    </p>
+    <div class="contact-header" style="text-align: center; margin-bottom: 4rem;">
+      <p class="overline reveal">Get In Touch</p>
+      <h2 id="contact-heading" class="display display-md reveal reveal-delay-1">Request Your Free<br>Site Assessment.</h2>
+      <p style="color:var(--text-muted);margin-top:1rem;font-size:0.95rem;max-width:500px;margin-left:auto;margin-right:auto;" class="reveal reveal-delay-2">
+        Fill in the form below or call us directly. We respond to all inquiries within one business day.
+      </p>
+    </div>
 
     <div class="contact-grid">
       <div class="contact-info-wrapper reveal" style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
@@ -1126,7 +1168,7 @@ footer{background:#000000 !important;border-top:1px solid rgba(255,255,255,0.1);
           </div>
         </div>
 
-        <div style="padding:2rem;border:1px solid var(--border);background:rgba(185,28,28,0.04);">
+        <div style="padding:2rem;border:1px solid var(--border);background:rgba(185,28,28,0.04);border-radius:12px;box-shadow:0 15px 35px rgba(0,0,0,0.06);">
           <p class="overline" style="margin-bottom:1rem">Why clients call us first</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem">
             <li style="font-size:0.85rem;color:var(--text-secondary);display:flex;align-items:center;gap:0.75rem">
@@ -1176,6 +1218,7 @@ footer{background:#000000 !important;border-top:1px solid rgba(255,255,255,0.1);
     </div>
   </div>
 </section>
+
 
 <!-- ========== FINAL CTA ========== -->
 <section id="final-cta" aria-labelledby="final-cta-heading">
@@ -1263,25 +1306,7 @@ footer{background:#000000 !important;border-top:1px solid rgba(255,255,255,0.1);
   },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   reveals.forEach(function(r){io.observe(r)});
 
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = btn.parentElement;
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i){
-        i.classList.remove('open');
-        i.querySelector('.faq-q').setAttribute('aria-expanded','false');
-        i.querySelector('.faq-a').style.maxHeight='0';
-        i.querySelector('.faq-a').style.paddingBottom='0';
-      });
-      if(!isOpen){
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-        var ans = item.querySelector('.faq-a');
-        ans.style.maxHeight = ans.scrollHeight + 'px';
-      }
-    });
-  });
+
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function(a){
