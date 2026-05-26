@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Damage Restoration Services. Fast, reliable, and certified.">
+    <title data-config="business_name">Damage Restoration Services</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Theme Engine -->
+    <script src="leads-data.js?v=2"></script>
+    <script src="config.js?v=2"></script>
+    <script src="template-engine.js?v=2" defer></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+        <div class="container text-center">
+            Serving <span data-config="service_area">Your Area</span> | Call 24/7 for Immediate Response: <a href="#" data-config="phone">Phone Number</a>
+        </div>
+    </div>
+
+    <!-- 2. HEADER NAVIGATION -->
+    <header id="main-header">
+        <nav class="container">
+            <a href="index.html" class="logo" id="brand-logo">
+                <!-- Injected via config.logo_url or business_name -->
+                Restoration Pro
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#gallery">Showcase</a>
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+            <div class="header-contact">
+                <div class="header-phone-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <a href="#" class="header-phone" data-config="phone">(555) 555-5555</a>
+                </div>
+                <a href="#booking" class="btn btn-primary">Get Help Now</a>
+            </div>
+            <!-- Hamburger (mobile) -->
+            <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- MOBILE NAV DRAWER -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#gallery" class="mobile-nav-link">Showcase</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#reviews" class="mobile-nav-link">Reviews</a>
+        <a href="#booking" class="btn">Get Emergency Help</a>
+    </nav>
+
+    <!-- 3. HERO (CONVERSION FOCUSED) -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content reveal-up">
+                <h1>24/7 Water Damage & Restoration in <span data-config="city">Your City</span></h1>
+                <p class="hero-sub">Rapid extraction, structural drying, and direct insurance billing. Certified specialists ready to restore your home and peace of mind.</p>
+                
+                <a href="#booking" class="btn">Request Emergency Dispatch</a>
+                <div style="margin-top: 1rem; margin-left: 0.5rem;">
+                    or call <a href="#" style="font-weight: bold; text-decoration: underline;" data-config="phone">(555) 555-5555</a>
+                </div>
+            </div>
+
+            <!-- MANDATORY FORM BLOCK -->
+            <div class="hero-form-box reveal-up" id="booking">
+                <h3>Request Emergency Service</h3>
+                <!-- Paste GoHighLevel form embed code here -->
+                <!-- START GHL EMBED -->
+                <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/c6PhTj3obI1V4iMwAUU5"
+                    style="width:100%;border:none;border-radius:3px"
+                    class="ghl-iframe"
+                    scrolling="no"
+                    id="inline-c6PhTj3obI1V4iMwAUU5" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact Us"
+                    data-height="580"
+                    data-layout-iframe-id="inline-c6PhTj3obI1V4iMwAUU5"
+                    data-form-id="c6PhTj3obI1V4iMwAUU5"
+                    title="Contact Us"
+                >
+                </iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                <!-- END GHL EMBED -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TRUST SECTION -->
+    <section class="trust-banner reveal-up">
+        <div class="container">
+            <div class="badges-container" id="trust-badges">
+                <!-- Badges injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Damage Restoration Services</h2>
+                <p>Comprehensive disaster recovery solutions tailored for <span data-config="city">Your City</span> properties.</p>
+            </div>
+            <div class="services-grid" id="services-grid">
+                <!-- Services injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5.5 BEFORE/AFTER SHOWCASE SECTION -->
+    <section class="before-after-section reveal-up" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Restoration Showcase</h2>
+                <p>Real water damage restoration results in <span data-config="city">Your City</span>. Drag the slider to compare Before and After.</p>
+            </div>
+            <div class="before-after-container">
+                <div class="before-after-slider">
+                    <div class="img-before">
+                        <img src="images/water_damage_before.png" alt="Flooded room before damage restoration">
+                        <span class="slider-label before">Before</span>
+                    </div>
+                    <div class="img-after">
+                        <img src="images/water_damage_after.png" alt="Clean dry room after damage restoration">
+                        <span class="slider-label after">After</span>
+                    </div>
+                    <div class="slider-handle">
+                        <div class="slider-button">↔</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. WHY CHOOSE US & ABOUT -->
+    <section class="container split-section" id="about">
+        <div class="split-image reveal-up" style="position: relative;">
+            <img id="about-image" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Restoration Specialist Working" onerror="this.src='https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80'">
+            <div class="experience-badge">
+                <span class="years">24/7</span>
+                <span class="exp-text">Rapid<br>Emergency Response</span>
+            </div>
+        </div>
+        <div class="split-content reveal-up">
+            <span class="pre-heading">YOUR LOCAL DISASTER EXPERTS</span>
+            <h2>Why Choose <span data-config="business_name">Us</span>?</h2>
+            <p class="about-lead" data-config="about_text">
+                Your trusted local damage restoration experts. We prioritize your health and safety with immediate response times and direct insurance billing.
+            </p>
+            
+            <ul class="why-us-list" id="why-us-list">
+                <!-- Injected via JS -->
+            </ul>
+            
+            <a href="#booking" class="btn btn-primary" style="margin-top: 1rem;">Get Immediate Help</a>
+        </div>
+    </section>
+
+    <!-- 7. TESTIMONIALS -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from property owners in <span data-config="city">Your City</span>.</p>
+            </div>
+            <div class="reviews-grid" id="reviews-grid">
+                <!-- Reviews injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-bg-effects" aria-hidden="true">
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+            <div class="cta-orb cta-orb-3"></div>
+        </div>
+        <div class="container cta-inner">
+            <div class="cta-left reveal-up">
+                <span class="cta-eyebrow">⚡ Emergency Response Team — Active Now</span>
+                <h2>Disaster Strikes<br><em>Unexpectedly.</em><br>We Respond<br><strong>Immediately.</strong></h2>
+                <p>Our IICRC-certified damage restoration specialists are on standby around the clock — ready to extract, dry, and restore your property before the damage gets worse.</p>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <span class="cta-stat-num">&lt;60</span>
+                        <span class="cta-stat-label">Min. Response</span>
+                    </div>
+                    <div class="cta-stat-divider"></div>
+                    <div class="cta-stat">
+                        <span class="cta-stat-num">24/7</span>
+                        <span class="cta-stat-label">Availability</span>
+                    </div>
+                    <div class="cta-stat-divider"></div>
+                    <div class="cta-stat">
+                        <span class="cta-stat-num">500+</span>
+                        <span class="cta-stat-label">Properties Restored</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-right reveal-up">
+                <div class="cta-card">
+                    <div class="cta-card-header">
+                        <div class="cta-pulse-wrap">
+                            <span class="cta-pulse-dot"></span>
+                            <span class="cta-pulse-ring"></span>
+                            <span class="cta-pulse-ring cta-pulse-ring-2"></span>
+                        </div>
+                        <span class="cta-status-label">Team Standing By</span>
+                    </div>
+                    <div class="cta-card-icon">🚨</div>
+                    <h3>One Call. Immediate Dispatch.</h3>
+                    <p>Don't wait — water and fire damage compounds every hour. Our crew will be on-site fast with full restoration equipment.</p>
+                    <a href="#booking" class="btn cta-btn-main" id="cta-emergency-btn">Get Fast Emergency Help Now</a>
+                    <div class="cta-trust-chips">
+                        <span class="cta-chip">✓ Direct Insurance Billing</span>
+                        <span class="cta-chip">✓ IICRC Certified</span>
+                        <span class="cta-chip">✓ No Hidden Fees</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 data-config="business_name">Restoration Company</h4>
+                    <p data-config="about_text">Leading the area in rapid emergency response and premium damage restoration solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>Call: <a href="#" data-config="phone">(555) 555-5555</a></li>
+                        <li>Email: <a href="#" data-config="email">emergency@restoration.com</a></li>
+                        <li>Serving: <span data-config="service_area">Area</span></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#booking">Emergency Booking</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> <span data-config="business_name">Business Name</span>. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <!-- Hamburger Menu Toggle -->
+    <script>
+      (function() {
+        var btn = document.getElementById('hamburger-btn');
+        var nav = document.getElementById('mobile-nav');
+        var links = nav.querySelectorAll('a');
+
+        function openMenu() {
+          btn.classList.add('open');
+          nav.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+          btn.classList.remove('open');
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        }
+
+        btn.addEventListener('click', function() {
+          nav.classList.contains('open') ? closeMenu() : openMenu();
+        });
+
+        links.forEach(function(link) {
+          link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') closeMenu();
+        });
+      })();
+    </script>
+    <!-- Chat Widget -->
+    <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69f07d5f2a45a437f24db049"></script>
+</body>
+</html>
