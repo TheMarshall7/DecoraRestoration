@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decora Building Restoration | Toronto's Premier Building Restoration Specialists Since 1990</title>
+<meta name="description" content="Decora Building Restoration has served the Greater Toronto Area since 1990. Specialists in building envelope, balcony restoration, masonry, and parking garage rehabilitation. Call 416-285-7788 for a free site assessment.">
+<meta name="keywords" content="building restoration Toronto, balcony restoration GTA, masonry repair Toronto, parking garage restoration, building envelope repair, condo restoration Toronto">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #b91c1c;
+  --gold-light: #dc2626;
+  --gold-pale: #fef2f2;
+  --near-black: #f8fafc;
+  --charcoal: #ffffff;
+  --dark-surface: #f1f5f9;
+  --mid: #e2e8f0;
+  --text-muted: #64748b;
+  --text-secondary: #475569;
+  --white: #0f172a;
+  --off-white: #1e293b;
+  --border: rgba(15, 23, 42, 0.08);
+  --transition: 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--near-black);color:var(--white);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden}
+
+/* TYPOGRAPHY */
+.display{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.1;letter-spacing:-0.02em}
+.display-lg{font-size:clamp(3.5rem,7vw,7rem)}
+.display-md{font-size:clamp(2.5rem,5vw,4.5rem)}
+.display-sm{font-size:clamp(2rem,4vw,3rem)}
+.serif{font-family:'Cormorant Garamond',serif}
+.gold{color:var(--gold)}
+.gold-text{background:linear-gradient(135deg,#ea580c,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.muted{color:var(--text-muted)}
+.overline{font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-weight:500}
+
+/* LAYOUT */
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.container-wide{max-width:1400px;margin:0 auto;padding:0 2rem}
+section{padding:6rem 0}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:0.75rem;background:var(--gold);color:var(--near-black);padding:1rem 2.5rem;font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:var(--transition);position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(15,23,42,0.15);transition:left 0.4s ease}
+.btn-primary:hover::before{left:100%}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-outline{display:inline-flex;align-items:center;gap:0.75rem;background:transparent;color:var(--white);padding:1rem 2.5rem;font-family:'DM Sans',sans-serif;font-size:0.875rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(15,23,42,0.3);cursor:pointer;transition:var(--transition)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-call{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:var(--gold);padding:1rem 2rem;font-size:1.1rem;font-weight:500;text-decoration:none;border:1px solid var(--border);transition:var(--transition)}
+.btn-call:hover{background:rgba(225,29,72,0.1);border-color:var(--gold)}
+
+/* =====================
+   STICKY MOBILE BAR
+   ===================== */
+.mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--near-black);border-top:1px solid var(--border);padding:0.75rem 1rem;gap:0.75rem}
+@media(max-width:768px){.mobile-cta-bar{display:flex}}
+.mobile-cta-bar a{flex:1;text-align:center;padding:0.9rem;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:var(--transition)}
+.mobile-cta-bar .m-call{background:var(--gold);color:var(--near-black)}
+.mobile-cta-bar .m-quote{border:1px solid var(--border);color:var(--white)}
+
+/* =====================
+   FLOATING QUOTE BUTTON (desktop)
+   ===================== */
+.float-cta{position:fixed;right:2rem;bottom:2.5rem;z-index:900;display:flex;flex-direction:column;gap:0.75rem;align-items:flex-end}
+@media(max-width:768px){.float-cta{display:none}}
+.float-btn{display:flex;align-items:center;gap:0.75rem;padding:0.9rem 1.5rem;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:var(--transition);white-space:nowrap;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+.float-btn-primary{background:var(--gold);color:var(--near-black)}
+.float-btn-primary:hover{background:var(--gold-light)}
+.float-btn-secondary{background:var(--charcoal);color:var(--white);border:1px solid var(--border)}
+.float-btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+
+/* =====================
+   NAV
+   ===================== */
+nav{position:fixed;top:0;left:0;right:0;z-index:800;padding:1.5rem 0;transition:background 0.4s,padding 0.4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(10,10,10,0.97);padding:1rem 0;border-bottom-color:var(--border);backdrop-filter:blur(20px)}
+nav.scrolled .nav-logo-main{color:#ffffff}
+nav.scrolled .nav-links a{color:#e2e8f0}
+nav.scrolled .nav-links a:hover{color:#ffffff}
+nav.scrolled .nav-phone{color:#ffffff;background:var(--gold);border-color:var(--gold)}
+nav.scrolled .nav-phone:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none}
+.nav-logo-main{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;letter-spacing:0.08em;color:#ffffff;line-height:1}
+.nav-logo-sub{font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:2.5rem}
+@media(max-width:900px){.nav-links{display:none}}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,0.75);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.3s}
+.nav-links a:hover{color:#ffffff}
+.nav-phone{font-size:0.85rem;color:#ffffff;text-decoration:none;font-weight:500;border:1px solid rgba(255,255,255,0.3);padding:0.5rem 1.25rem;transition:var(--transition)}
+.nav-phone:hover{background:rgba(255,255,255,0.1);border-color:#ffffff}
+
+/* =====================
+   HERO
+   ===================== */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding-bottom:5rem;color:#ffffff !important}
+#hero h1{color:#ffffff !important}
+#hero .hero-sub{color:rgba(255, 255, 255, 0.8) !important}
+#hero .overline{color:var(--gold) !important}
+#hero .hero-eyebrow::before{background:var(--gold) !important}
+#hero .stat-number{color:var(--gold) !important}
+#hero .stat-label{color:rgba(255, 255, 255, 0.6) !important}
+#hero .hero-scroll span{color:rgba(255, 255, 255, 0.6) !important}
+#hero .btn-primary {color:#000000 !important}
+#hero .btn-primary:hover {background:var(--gold-light) !important;color:#ffffff !important}
+#hero .btn-call{color:#ffffff !important;border-color:rgba(255,255,255,0.4) !important}
+#hero .btn-call:hover{background:rgba(255,255,255,0.1) !important}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse at 60% 0%, rgba(225,29,72,0.07) 0%, transparent 60%),
+  radial-gradient(ellipse at 0% 100%, rgba(225,29,72,0.04) 0%, transparent 50%);
+  z-index:0}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(15,23,42,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(15,23,42,0.02) 1px,transparent 1px);background-size:80px 80px;z-index:0;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,white 30%,transparent 100%)}
+.hero-content{position:relative;z-index:2}
+.hero-eyebrow{display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem}
+.hero-eyebrow::before{content:'';width:3rem;height:1px;background:var(--gold)}
+.hero-headline{margin-bottom:2rem}
+.hero-headline em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-size:1.1rem;color:var(--text-secondary);max-width:520px;margin-bottom:3rem;line-height:1.7}
+.hero-actions{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:4rem}
+.hero-stats{display:flex;gap:4rem;flex-wrap:wrap;padding-top:3rem;border-top:1px solid var(--border)}
+.stat-item{display:flex;flex-direction:column;gap:0.25rem}
+.stat-number{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold-light);line-height:1}
+.stat-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted)}
+.hero-scroll{position:absolute;right:2rem;bottom:5rem;display:flex;flex-direction:column;align-items:center;gap:0.5rem;z-index:2}
+.hero-scroll span{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);writing-mode:vertical-rl}
+.scroll-line{width:1px;height:4rem;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%,100%{opacity:0.3;transform:scaleY(0.5) translateY(-50%)}50%{opacity:1;transform:scaleY(1) translateY(0)}}
+
+/* =====================
+   TRUST BAR
+   ===================== */
+.trust-bar{background:var(--charcoal);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+.trust-item{display:flex;align-items:center;gap:0.75rem;font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-secondary)}
+.trust-icon{width:1.5rem;height:1.5rem;fill:var(--gold)}
+
+/* =====================
+   SERVICES
+   ===================== */
+#services{background:var(--near-black)}
+.services-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:5rem}
+@media(max-width:768px){.services-header{grid-template-columns:1fr;gap:2rem}}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border)}
+.service-card{background:var(--gold);color:var(--charcoal);padding:3rem 2.5rem;transition:var(--transition);cursor:default;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--charcoal);transition:width 0.5s ease}
+.service-card:hover::before{width:100%}
+.service-card:hover{background:var(--gold-light)}
+.service-num{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;color:rgba(255,255,255,0.25);line-height:1;margin-bottom:1.5rem;display:block}
+.service-icon-wrap{width:3rem;height:3rem;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+.service-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;margin-bottom:1rem;line-height:1.2;color:#ffffff;}
+.service-desc{font-size:0.9rem;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:1.5rem}
+.service-tags{display:flex;flex-wrap:wrap;gap:0.5rem}
+.tag{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.3rem 0.7rem;border:1px solid rgba(255,255,255,0.3);color:#ffffff;}
+
+/* =====================
+   WHY CHOOSE
+   ===================== */
+#why {
+  background: #1c1917 !important;
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+#why-heading {
+  color: #ffffff !important;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  background: transparent !important;
+  margin-top: 4rem;
+}
+.why-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px !important;
+  padding: 3.5rem 2.5rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.why-card::before {
+  display: none;
+}
+.why-card:hover {
+  transform: translateY(-5px);
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  box-shadow: 0 20px 40px rgba(185, 28, 28, 0.4);
+}
+.why-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.15);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transition: color 0.5s ease;
+}
+.why-card:hover .why-number {
+  color: #ffffff;
+}
+.why-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+}
+.why-content p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7) !important;
+  line-height: 1.8;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* =====================
+   BEFORE / AFTER
+   ===================== */
+#transformations{background:#ffffff !important;color:var(--white) !important}
+#transformations h2{color:var(--white) !important}
+#transformations p{color:var(--text-secondary) !important}
+#transformations .ba-grid{background:transparent;}
+#transformations .ba-card{background:var(--gold) !important; border-radius: 12px; border: none; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);}
+#transformations .ba-info h4{color:#ffffff !important}
+#transformations .ba-info p{color:rgba(255,255,255,0.8) !important}
+.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4rem;background:transparent;border:none;margin-top:4rem}
+@media(max-width:900px){.ba-grid{grid-template-columns:1fr}}
+.ba-card{background:var(--dark-surface);overflow:hidden;position:relative}
+.ba-visual{height:260px;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.ba-before,.ba-after{display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.ba-before{background:linear-gradient(135deg,#f1f5f9,#e2e8f0)}
+.ba-after{background:linear-gradient(135deg,#e0f2fe,#bae6fd)}
+.ba-label{position:absolute;top:0.75rem;left:0.75rem;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.25rem 0.5rem;z-index:2}
+.ba-label.before-label{background:rgba(0,0,0,0.7);color:#94a3b8 !important}
+.ba-label.after-label{background:rgba(225,29,72,0.9);color:var(--near-black)}
+.ba-divider{position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--gold);z-index:3}
+.ba-divider::before{content:'↔';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--gold);color:var(--near-black);width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;font-size:0.8rem;border-radius:50%}
+.ba-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;opacity:0.3}
+.ba-placeholder svg{width:2.5rem;height:2.5rem;opacity:0.5}
+.ba-placeholder span{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase}
+.ba-info{padding:1.5rem 2rem}
+.ba-info h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:0.25rem}
+.ba-info p{font-size:0.8rem;color:var(--text-muted)}
+.ba-info .project-type{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+
+/* =====================
+   TESTIMONIALS
+   ===================== */
+#testimonials{background:var(--dark-surface)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:4rem}
+.testimonial-card{background:var(--gold);padding:2.5rem;border:none;position:relative;border-radius:12px;}
+.testimonial-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:6rem;color:rgba(255,255,255,0.2);position:absolute;top:-1rem;left:1.5rem;line-height:1}
+.stars{display:flex;gap:0.25rem;margin-bottom:1.5rem}
+.star{color:#ffffff;font-size:0.9rem}
+.testimonial-text{font-size:0.95rem;line-height:1.8;color:#ffffff;margin-bottom:2rem;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+.testimonial-author{display:flex;align-items:center;gap:1rem}
+.author-avatar{width:3rem;height:3rem;border-radius:50%;background:#ffffff;display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--gold);font-size:0.875rem;flex-shrink:0}
+.author-name{font-weight:600;font-size:0.875rem;color:#ffffff}
+.author-role{font-size:0.75rem;color:rgba(255,255,255,0.8);margin-top:0.1rem}
+
+/* =====================
+   PROCESS
+   ===================== */
+#process{background:#ffffff}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:5rem;position:relative}
+@media(max-width:900px){.process-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:550px){.process-steps{grid-template-columns:1fr}}
+.process-steps::before{content:'';position:absolute;top:2.5rem;left:12.5%;right:12.5%;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0.3;z-index:0}
+@media(max-width:900px){.process-steps::before{display:none}}
+.process-step{padding:2rem;text-align:center;position:relative;z-index:1;transition:transform 0.4s ease}
+.process-step:hover{transform:translateY(-8px)}
+.step-number{width:5rem;height:5rem;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-family:'Outfit',sans-serif;font-size:2rem;font-weight:400;color:#ffffff;background:var(--gold);box-shadow:0 10px 25px rgba(185,28,28,0.3);transition:all 0.4s ease;position:relative}
+.step-number::after{content:'';position:absolute;inset:-6px;border:1px solid rgba(185,28,28,0.2);border-radius:50%;transition:all 0.4s ease}
+.process-step:hover .step-number{transform:scale(1.05);box-shadow:0 15px 35px rgba(185,28,28,0.4)}
+.process-step:hover .step-number::after{inset:-8px;border-color:rgba(185,28,28,0.4)}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;color:#111827}
+.step-desc{font-size:0.95rem;color:var(--text-secondary);line-height:1.8}
+
+/* =====================
+   EMERGENCY CTA
+   ===================== */
+#emergency{background:linear-gradient(to right, rgba(14, 19, 32, 1) 0%, rgba(14, 19, 32, 0.9) 45%, rgba(14, 19, 32, 0.3) 100%), url('RESTORTATION/images/cracked_concrete.png') center/cover;border-top:1px solid var(--border);border-bottom:1px solid var(--border);color:#ffffff !important}
+#emergency .btn-primary {
+  background: var(--gold) !important;
+  color: #ffffff !important;
+}
+#emergency .btn-primary:hover {
+  background: var(--gold-light) !important;
+  color: #ffffff !important;
+}
+#emergency .btn-outline {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+#emergency .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.emergency-inner{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4rem;padding:4rem 0}
+@media(max-width:768px){.emergency-inner{grid-template-columns:1fr;gap:2rem;padding:3rem 0}}
+.emergency-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(225,29,72,0.1);border:1px solid var(--border);padding:0.4rem 1rem;margin-bottom:1.5rem;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+.pulse{width:0.5rem;height:0.5rem;border-radius:50%;background:var(--gold);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
+.emergency-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;line-height:1.1;margin-bottom:1rem;color:#ffffff !important}
+.emergency-inner p{color:#94a3b8 !important;font-size:0.95rem;max-width:480px}
+
+/* =====================
+   PROJECT SHOWCASE
+   ===================== */
+#projects{background:var(--charcoal)}
+.projects-grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:1px;background:var(--border);margin-top:4rem}
+@media(max-width:900px){.projects-grid{grid-template-columns:1fr}}
+.project-card{background:var(--dark-surface);overflow:hidden;position:relative;cursor:default}
+.project-card.large{grid-row:span 2}
+@media(max-width:900px){.project-card.large{grid-row:span 1}}
+.project-img{height:280px;background:linear-gradient(135deg,#e0f2fe,#bae6fd);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.project-card.large .project-img{height:460px}
+@media(max-width:900px){.project-card.large .project-img{height:260px}}
+.project-img-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.project-info{padding:2rem;border-top:1px solid var(--border)}
+.project-type{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.project-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;margin-bottom:0.5rem}
+.project-meta{font-size:0.8rem;color:var(--text-muted)}
+
+/* =====================
+   AREAS SERVED
+   ===================== */
+#areas{background:#0a0e17 !important;padding:5rem 0;color:#ffffff !important}
+#areas h2{color:#ffffff !important}
+#areas p{color:#94a3b8 !important}
+#areas .areas-list{border-left-color:rgba(255,255,255,0.1) !important}
+#areas .area-item{color:#94a3b8 !important;border-bottom-color:rgba(255,255,255,0.1) !important}
+#areas .area-item:hover{color:#ffffff !important;background:rgba(225,29,72,0.1) !important}
+.areas-content{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+@media(max-width:768px){.areas-content{grid-template-columns:1fr;gap:3rem}}
+.areas-list{display:grid;grid-template-columns:1fr 1fr;gap:0;border-left:1px solid var(--border)}
+.area-item{padding:0.9rem 1.5rem;font-size:0.875rem;color:var(--text-secondary);border-bottom:1px solid var(--border);transition:var(--transition);cursor:default}
+.area-item:hover{color:var(--white);background:rgba(225,29,72,0.04);padding-left:2rem}
+
+/* =====================
+   FAQ
+   ===================== */
+#faq{background:var(--charcoal)}
+.faq-list{margin-top:4rem;border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;color:var(--white);text-align:left;padding:2rem 0;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:400;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:2rem;transition:color 0.3s}
+.faq-q:hover{color:var(--gold-light)}
+.faq-q .faq-icon{width:1.5rem;height:1.5rem;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;transition:transform 0.3s,border-color 0.3s}
+.faq-item.open .faq-q .faq-icon{transform:rotate(45deg);border-color:var(--gold)}
+.faq-item.open .faq-q{color:var(--gold-light)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s}
+.faq-a-inner{padding-bottom:2rem;color:var(--text-muted);line-height:1.8;font-size:0.95rem;max-width:720px}
+
+/* =====================
+   CONTACT / QUOTE FORM
+   ===================== */
+#contact{background:var(--near-black)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;margin-top:4rem}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:3rem}}
+.contact-info{display:flex;flex-direction:column;gap:2.5rem}
+.contact-detail{display:flex;flex-direction:column;gap:0.3rem}
+.contact-detail .label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold)}
+.contact-detail a,.contact-detail span{color:var(--white);text-decoration:none;font-size:1.1rem;transition:color 0.3s}
+.contact-detail a:hover{color:var(--gold-light)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:550px){.form-row{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem}
+.form-group label{font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)}
+.form-group input,.form-group select,.form-group textarea{background:rgba(15,23,42,0.04);border:1px solid var(--border);color:var(--white);padding:1rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:0.95rem;width:100%;transition:border-color 0.3s;outline:none;-webkit-appearance:none;appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-group select option{background:var(--charcoal);color:var(--white)}
+.form-note{font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem}
+
+/* =====================
+   FINAL CTA
+   ===================== */
+#final-cta{background:var(--charcoal);text-align:center;padding:8rem 0;position:relative;overflow:hidden}
+#final-cta::before{content:'DECORA';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(6rem,18vw,18rem);font-weight:300;color:rgba(225,29,72,0.04);white-space:nowrap;pointer-events:none;line-height:1}
+#final-cta .container{position:relative;z-index:1}
+#final-cta h2{margin-bottom:1.5rem}
+#final-cta p{color:var(--text-muted);max-width:480px;margin:0 auto 3rem;font-size:1rem}
+#final-cta .cta-btns{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer{background:#000000 !important;border-top:1px solid rgba(255,255,255,0.1);padding:4rem 0 6rem;color:#ffffff !important}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:3rem}}
+@media(max-width:550px){.footer-grid{grid-template-columns:1fr;gap:2rem}}
+.footer-logo{margin-bottom:1.5rem}
+.footer-desc{font-size:0.85rem;color:#94a3b8 !important;line-height:1.7;max-width:280px;margin-bottom:2rem}
+.footer-col h5{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
+.footer-col ul li a{color:#94a3b8 !important;text-decoration:none;font-size:0.85rem;transition:color 0.3s}
+.footer-col ul li a:hover{color:#ffffff !important}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);margin-top:4rem;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:0.75rem;color:#64748b !important}
+
+/* =====================
+   CERTIFICATIONS
+   ===================== */
+.certs-strip{background:var(--dark-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2rem 0}
+.certs-inner{display:flex;align-items:center;justify-content:center;gap:4rem;flex-wrap:wrap}
+.cert-item{display:flex;flex-direction:column;align-items:center;gap:0.4rem}
+.cert-badge{width:3rem;height:3rem;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.cert-badge svg{width:1.4rem;height:1.4rem;fill:var(--gold)}
+.cert-name{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)}
+
+/* =====================
+   ANIMATIONS
+   ===================== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* Gold line separator */
+.gold-line{width:3rem;height:1px;background:var(--gold);margin:1.5rem 0}
+
+/* Map embed */
+.map-embed{border:1px solid var(--border);overflow:hidden;height:260px;margin-top:2rem}
+
+/* SCHEMA data hidden */
+.schema-hidden{display:none}
+
+@media(max-width:768px){
+  section{padding:4rem 0}
+  .hero-stats{gap:2rem}
+  .stat-number{font-size:2rem}
+  .why-card{flex-direction:column;gap:1rem}
+  .contact-grid{gap:3rem}
+  footer{padding-bottom:8rem}
+}
+@media(max-width:900px){
+  .hero-grid-layout, .contact-info-wrapper{grid-template-columns:1fr !important;}
+}
+
+/* Form success state */
+.form-success{display:none;padding:2rem;border:1px solid var(--gold);background:rgba(225,29,72,0.06);text-align:center}
+.form-success h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-bottom:0.5rem;color:var(--gold-light)}
+.form-success p{font-size:0.875rem;color:var(--text-muted)}
+.ghl-iframe {
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  min-height: 580px;
+}
+</style>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Decora Building Restoration Ltd",
+  "description": "GTA building restoration specialists since 1990. Experts in building envelope, balcony restoration, masonry, and underground parking garage rehabilitation for condominiums, commercial properties, and municipal clients.",
+  "url": "https://decorarestoration.com",
+  "telephone": "+1-416-285-7788",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "319 Comstock Rd",
+    "addressLocality": "Scarborough",
+    "addressRegion": "ON",
+    "postalCode": "M1L 2H3",
+    "addressCountry": "CA"
+  },
+  "geo": {"@type": "GeoCoordinates","latitude": 43.7144,"longitude": -79.2811},
+  "openingHours": "Mo-Fr 07:30-17:30",
+  "priceRange": "$$$$",
+  "foundingDate": "1990",
+  "areaServed": ["Toronto","Scarborough","North York","Etobicoke","Mississauga","Brampton","Markham","Richmond Hill","Vaughan","Oakville"],
+  "serviceArea": {"@type": "GeoCircle","geoMidpoint": {"@type": "GeoCoordinates","latitude": 43.7144,"longitude": -79.2811},"geoRadius": "80000"},
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Building Restoration Services",
+    "itemListElement": [
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Building Envelope Restoration"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Balcony Restoration & Repair"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Masonry Repair & Tuck Pointing"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Underground Parking Garage Restoration"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Maintenance Programs for Condo Corporations"}}
+    ]
+  }
+}
+</script>
+</head>
+
+<body>
+
+<!-- ========== MOBILE STICKY BAR ========== -->
+<div class="mobile-cta-bar" role="complementary" aria-label="Quick contact">
+  <a href="tel:+14162857788" class="m-call">📞 Call Now</a>
+  <a href="#contact" class="m-quote">Get a Quote</a>
+</div>
+
+<!-- ========== NAV ========== -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Decora Building Restoration home">
+        <span class="nav-logo-main">DECORA</span>
+        <span class="nav-logo-sub">Building Restoration Ltd</span>
+      </a>
+      <div class="nav-links" role="list">
+        <a href="#services" role="listitem">Services</a>
+        <a href="#why" role="listitem">Why Decora</a>
+        <a href="#process" role="listitem">Our Process</a>
+        <a href="#faq" role="listitem">FAQ</a>
+        <a href="#contact" role="listitem">Contact</a>
+      </div>
+      <a href="tel:+14162857788" class="nav-phone" aria-label="Call Decora at 416-285-7788">416-285-7788</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section id="hero" aria-labelledby="hero-headline">
+  <div class="hero-bg" aria-hidden="true" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('RESTORTATION/images/hero.png') center/cover; opacity: 1;"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-grid-layout" style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal">
+          <span class="overline">Toronto's Restoration Authority</span>
+        </div>
+        <h1 id="hero-headline" class="display display-lg hero-headline reveal reveal-delay-1">
+          Your Building<br>Deserves to<br><em class="gold-text" style="font-style:italic">Stand Longer.</em>
+        </h1>
+        <p class="hero-sub reveal reveal-delay-2">
+          When concrete cracks, balconies fail, or water finds its way in — Decora is the call every serious property manager makes. Serving the GTA since 1990.
+        </p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#contact" class="btn-primary">
+            Request Free Site Assessment
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats reveal reveal-delay-4">
+          <div class="stat-item">
+            <span class="stat-number">35+</span>
+            <span class="stat-label">Years in the GTA</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-form reveal reveal-delay-4" style="background:var(--charcoal); padding: 1rem; border-radius: 8px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+        <iframe
+            src="https://api.leadconnectorhq.com/widget/form/c6PhTj3obI1V4iMwAUU5"
+            style="width:100%;border:none;border-radius:3px;min-height:580px;"
+            class="ghl-iframe"
+            scrolling="no"
+            id="inline-c6PhTj3obI1V4iMwAUU5-hero" 
+            title="Contact Us"
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ========== TRUST BAR ========== -->
+<div class="trust-bar" role="complementary" aria-label="Trust signals">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5"/></svg>
+        WSIB Compliant
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Fully Insured
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Rapid Response
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Family-Owned Since 1990
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Municipal & Institutional Experience
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== SERVICES ========== -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <p class="overline reveal">What We Do</p>
+        <h2 id="services-heading" class="display display-md reveal reveal-delay-1">Restoration<br>That Lasts.</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+        <p style="color:var(--text-muted);line-height:1.8;font-size:0.95rem;" class="reveal reveal-delay-2">
+          We specialize in the structural and envelope systems that keep your building safe, compliant, and water-tight. Every project is backed by decades of GTA-specific experience — and every team is led by professionals who've seen it all.
+        </p>
+        <a href="#contact" class="btn-primary reveal reveal-delay-3" style="margin-top:2rem;display:inline-flex">Get a Quote →</a>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <img src="RESTORTATION/images/commercial_building.png" alt="Commercial Building Restoration" style="width:100%; height:auto; border-radius:12px; object-fit:cover; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+      </div>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="service-card" tabindex="0">
+        <span class="service-num" aria-hidden="true">01</span>
+        <h3 class="service-title">Building Envelope Restoration</h3>
+        <p class="service-desc">Comprehensive repair and rehabilitation of your building's exterior systems — walls, cladding, sealants, flashing, and waterproofing. We stop water before it becomes a structural crisis.</p>
+        <div class="service-tags">
+          <span class="tag">Façade Repair</span>
+          <span class="tag">Waterproofing</span>
+          <span class="tag">Sealant Systems</span>
+          <span class="tag">Cladding</span>
+        </div>
+      </div>
+
+      <div class="service-card" tabindex="0">
+        <span class="service-num" aria-hidden="true">02</span>
+        <h3 class="service-title">Balcony Restoration & Repair</h3>
+        <p class="service-desc">Concrete slab restoration, membrane waterproofing, railing upgrades, and structural rehabilitation for condo balconies and terraces — compliant with RCA and condo regulations.</p>
+        <div class="service-tags">
+          <span class="tag">Slab Repair</span>
+          <span class="tag">Membrane Systems</span>
+          <span class="tag">Railing Interfaces</span>
+          <span class="tag">Condo Boards</span>
+        </div>
+      </div>
+
+      <div class="service-card" tabindex="0">
+        <span class="service-num" aria-hidden="true">03</span>
+        <h3 class="service-title">Masonry Repair & Tuck Pointing</h3>
+        <p class="service-desc">Brick replacement, mortar repointing, spandrel repair, lintel restoration, and concrete block work. We match existing materials so repairs are invisible to the eye and durable for decades.</p>
+        <div class="service-tags">
+          <span class="tag">Brick Repair</span>
+          <span class="tag">Tuck Pointing</span>
+          <span class="tag">Concrete Repair</span>
+          <span class="tag">Lintels</span>
+        </div>
+      </div>
+
+      <div class="service-card" tabindex="0">
+        <span class="service-num" aria-hidden="true">04</span>
+        <h3 class="service-title">Parking Garage Rehabilitation</h3>
+        <p class="service-desc">Underground and above-grade garage restoration including slab repairs, column repairs, traffic decks, drainage systems, and cathodic protection. We keep your garage functional and structurally sound.</p>
+        <div class="service-tags">
+          <span class="tag">Slab Restoration</span>
+          <span class="tag">Traffic Decks</span>
+          <span class="tag">Structural Repair</span>
+          <span class="tag">Drainage</span>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== BEFORE / AFTER ========== -->
+<section id="transformations" aria-labelledby="ba-heading">
+  <div class="container">
+    <p class="overline reveal">Project Results</p>
+    <h2 id="ba-heading" class="display display-md reveal reveal-delay-1">Before & After</h2>
+    <p style="color:var(--text-muted);margin-top:1rem;max-width:500px;font-size:0.95rem" class="reveal reveal-delay-2">
+      Real transformations. Real buildings. Placeholder imagery below — client photography to be added.
+    </p>
+
+    <div class="ba-grid">
+      <div class="ba-card reveal">
+        <div class="ba-visual">
+          <div class="ba-before">
+            <span class="ba-label before-label">Before</span>
+            <img src="RESTORTATION/images/water_damage_before.png" style="width:100%;height:100%;object-fit:cover;" alt="Before">
+          </div>
+          <div class="ba-after">
+            <span class="ba-label after-label">After</span>
+            <img src="RESTORTATION/images/water_damage_after.png" style="width:100%;height:100%;object-fit:cover;" alt="After">
+          </div>
+          <div class="ba-divider" aria-hidden="true"></div>
+        </div>
+        <div class="ba-info">
+          <div class="project-type">Condo Corporation · Scarborough</div>
+          <h4>Balcony Slab Restoration</h4>
+          <p>22-storey residential tower · 180 balconies rehabilitated</p>
+        </div>
+      </div>
+
+      <div class="ba-card reveal reveal-delay-1">
+        <div class="ba-visual">
+          <div class="ba-before">
+            <span class="ba-label before-label">Before</span>
+            <img src="RESTORTATION/images/fire_damage_before.png" style="width:100%;height:100%;object-fit:cover;" alt="Before">
+          </div>
+          <div class="ba-after">
+            <span class="ba-label after-label">After</span>
+            <img src="RESTORTATION/images/fire_damage_after.png" style="width:100%;height:100%;object-fit:cover;" alt="After">
+          </div>
+          <div class="ba-divider" aria-hidden="true"></div>
+        </div>
+        <div class="ba-info">
+          <div class="project-type">Commercial · Mississauga</div>
+          <h4>Masonry & Brick Restoration</h4>
+          <p>Office complex façade · Full tuck pointing & lintel repair</p>
+        </div>
+      </div>
+
+
+    </div>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.75rem;margin-top:2rem;letter-spacing:0.05em">
+      ✦ Photography placeholders — add client project photos before launch
+    </p>
+  </div>
+</section>
+
+<!-- ========== WHY CHOOSE ========== -->
+<section id="why" aria-labelledby="why-heading">
+  <div class="container">
+    <p class="overline reveal">Why Decora</p>
+    <h2 id="why-heading" class="display display-md reveal reveal-delay-1">The Difference<br>is in the Detail.</h2>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-number" aria-hidden="true">01</div>
+        <div class="why-content">
+          <h3>35 Years of GTA Experience</h3>
+          <p>Since 1990, we've worked on every building type in the GTA — from single commercial buildings to large condominium complexes and municipal facilities. We know local code, local conditions, and local engineering firms.</p>
+        </div>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-number" aria-hidden="true">02</div>
+        <div class="why-content">
+          <h3>Trusted by Condo Boards & Property Managers</h3>
+          <p>We understand how condo corporations work — reserve fund studies, board approvals, tenant communication. We make the process smooth and protect your relationship with your residents throughout every project.</p>
+        </div>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-number" aria-hidden="true">03</div>
+        <div class="why-content">
+          <h3>Municipal & Institutional Track Record</h3>
+          <p>We've submitted and won restoration bids for municipal clients including the Region of Peel and the City of Kitchener. That level of documentation, safety, and execution comes standard on every project.</p>
+        </div>
+      </div>
+
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-number" aria-hidden="true">04</div>
+        <div class="why-content">
+          <h3>Competitive Pricing, No Compromise on Quality</h3>
+          <p>We use the latest products, materials, and installation techniques — and we don't inflate margins to cover poor process. Our pricing reflects real value, not inflated overhead.</p>
+        </div>
+      </div>
+
+      <div class="why-card reveal">
+        <div class="why-number" aria-hidden="true">05</div>
+        <div class="why-content">
+          <h3>Family-Owned. Accountable to You.</h3>
+          <p>You're not a ticket in a project management system. You're talking to people who care about their reputation — because it's their name on every project in this city.</p>
+        </div>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-number" aria-hidden="true">06</div>
+        <div class="why-content">
+          <h3>Fully Insured & WSIB Compliant</h3>
+          <p>Every crew, every project. You won't face liability risk because we didn't carry the right coverage. We handle safety documentation so you can hand it straight to your building consultant or engineer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <p class="overline reveal">Client Feedback</p>
+    <h2 id="testimonials-heading" class="display display-md reveal reveal-delay-1">What Clients Say</h2>
+    <p style="color:var(--text-muted);margin-top:0.5rem;font-size:0.85rem;font-style:italic" class="reveal reveal-delay-2">
+      ✦ Replace with verified Google Reviews before launch
+    </p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="testimonial-text">"Decora handled our entire balcony restoration program — 200 units — on time and with minimal disruption to residents. Their communication with our board was excellent throughout."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">PM</div>
+          <div>
+            <div class="author-name">Property Manager</div>
+            <div class="author-role">Condominium Corporation · Scarborough</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="testimonial-text">"We've been working with Decora for over a decade on our portfolio of commercial buildings. They understand our timelines, and they deliver. I wouldn't call anyone else."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">VP</div>
+          <div>
+            <div class="author-name">VP, Facilities</div>
+            <div class="author-role">Commercial Property Owner · Toronto</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="testimonial-text">"The masonry work on our heritage building was done with real craftsmanship. They matched the original brick perfectly — you can't tell where the repair ends and the original wall begins."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">BD</div>
+          <div>
+            <div class="author-name">Building Director</div>
+            <div class="author-role">Mixed-Use Complex · North York</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROCESS ========== -->
+<section id="process" aria-labelledby="process-heading">
+  <div class="container">
+    <p class="overline reveal">How It Works</p>
+    <h2 id="process-heading" class="display display-md reveal reveal-delay-1">Simple From Start<br>to Finish.</h2>
+
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-number" aria-label="Step 1">1</div>
+        <h3 class="step-title">Site Assessment</h3>
+        <p class="step-desc">We visit your property, assess the scope, and identify what's critical versus what can wait. No charge, no obligation.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-number" aria-label="Step 2">2</div>
+        <h3 class="step-title">Detailed Proposal</h3>
+        <p class="step-desc">You receive a clear, itemized quote with timeline, materials, and a scope of work your board or engineer can review.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-number" aria-label="Step 3">3</div>
+        <h3 class="step-title">Managed Execution</h3>
+        <p class="step-desc">Our project managers oversee every phase. You get regular progress updates and zero-surprise site management.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-number" aria-label="Step 4">4</div>
+        <h3 class="step-title">Sign-Off & Warranty</h3>
+        <p class="step-desc">Final walkthrough, documentation package, and a warranty you can hand to your building consultant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EMERGENCY CTA ========== -->
+<section id="emergency" aria-labelledby="emergency-heading">
+  <div class="container">
+    <div class="emergency-inner">
+      <div>
+        <div class="emergency-badge">
+          <span class="pulse" aria-hidden="true"></span>
+          Priority Response Available
+        </div>
+        <h2 id="emergency-heading" class="display display-md">Structural Concern<br>or Active Water Leak?</h2>
+        <p>Don't wait for the next board meeting. If you have an active structural concern, water infiltration, or safety issue — call us directly. We respond quickly to urgent assessments across the GTA.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem;align-items:flex-start;flex-shrink:0">
+        <a href="tel:+14162857788" class="btn-primary" style="white-space:nowrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6.02 6.02l1.36-1.36a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 416-285-7788
+        </a>
+        <a href="#contact" class="btn-outline" style="white-space:nowrap">Submit Assessment Request</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CERTIFICATIONS ========== -->
+<div class="certs-strip" role="complementary" aria-label="Credentials and certifications">
+  <div class="container">
+    <div class="certs-inner">
+      <div class="cert-item">
+        <div class="cert-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="cert-name">WSIB Compliant</span>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <span class="cert-name">Fully Licensed</span>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <span class="cert-name">Liability Insured</span>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <span class="cert-name">GTA Since 1990</span>
+      </div>
+      <div class="cert-item">
+        <div class="cert-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="cert-name">Family-Owned</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div class="container" style="max-width:900px">
+    <p class="overline reveal">Common Questions</p>
+    <h2 id="faq-heading" class="display display-md reveal reveal-delay-1">Questions &<br>Answers.</h2>
+
+    <div class="faq-list reveal reveal-delay-2" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+          What areas of Toronto does Decora service?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-1" role="region">
+          <div class="faq-a-inner">
+            Decora serves the entire Greater Toronto Area including Toronto, Scarborough, North York, Etobicoke, Mississauga, Brampton, Markham, Richmond Hill, Vaughan, Oakville, and surrounding municipalities. For large projects, we also work across Southern Ontario.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+          How do I get a quote for a building restoration project?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-2" role="region">
+          <div class="faq-a-inner">
+            Start by calling us at 416-285-7788 or submitting the quote request form on this page. We'll schedule a no-obligation site assessment, evaluate the scope, and provide a detailed written proposal. For condo corporations, we can provide documentation suitable for board review and engineering consultation.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+          Are you insured and WSIB compliant?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-3" role="region">
+          <div class="faq-a-inner">
+            Yes. Decora Building Restoration is fully insured with comprehensive general liability coverage and is WSIB compliant. We can provide certificates of insurance and WSIB clearance certificates upon request — standard on any project.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+          Can Decora work with our building's engineering consultant?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-4" role="region">
+          <div class="faq-a-inner">
+            Absolutely — this is standard on most projects. We regularly work alongside structural and building envelope engineers, coordinating scopes, submittals, and inspections. If your property manager or condo board is working with a consulting engineer, we can integrate into that process smoothly.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
+          How long does a typical balcony restoration project take?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-5" role="region">
+          <div class="faq-a-inner">
+            It depends on the building size, scope, and weather conditions. A typical mid-rise with 80–120 balconies can be completed in 8–14 weeks of active work. We sequence work to minimize disruption to individual units and communicate proactively with property managers throughout.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
+          What is building envelope restoration?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-6" role="region">
+          <div class="faq-a-inner">
+            The building envelope is everything that separates the interior of your building from the outside — walls, windows, roofline, cladding, sealants, and waterproofing membranes. Envelope restoration involves repairing or replacing these systems to stop water infiltration, maintain structural integrity, and improve energy performance. It's one of the most critical investments a building owner or condo corporation can make.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-7">
+          Do you handle parking garage restoration for underground garages?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-7" role="region">
+          <div class="faq-a-inner">
+            Yes. Underground parking garage rehabilitation is one of our core specialties. This includes concrete slab repairs, column and beam repairs, post-tensioned slab work, waterproofing membrane installation, drainage system upgrades, and traffic deck coatings. We've completed these projects for commercial clients, condo corporations, and municipal facilities.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-8">
+          Do you offer winter restoration work?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" id="faq-a-8" role="region">
+          <div class="faq-a-inner">
+            Some restoration work can be performed year-round; other scopes — particularly those involving concrete pours, membrane installation, or masonry pointing — have temperature sensitivities. We'll give you an honest assessment of what can proceed and when, and we can schedule post-winter inspections to plan your spring/summer program proactively.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== AREAS SERVED ========== -->
+<section id="areas" aria-labelledby="areas-heading">
+  <div class="container">
+    <div class="areas-content">
+      <div>
+        <p class="overline reveal">Service Coverage</p>
+        <h2 id="areas-heading" class="display display-md reveal reveal-delay-1">Proudly Serving<br>the GTA.</h2>
+        <div class="gold-line reveal reveal-delay-2"></div>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:2rem" class="reveal reveal-delay-3">
+          From Scarborough to Oakville, and everywhere in between. If your building is in the Greater Toronto Area, we can be on-site within 24 hours for an urgent assessment.
+        </p>
+        <a href="#contact" class="btn-primary reveal reveal-delay-4">Check Your Area →</a>
+      </div>
+      <div>
+        <div class="areas-list reveal reveal-delay-1">
+          <span class="area-item">Toronto (all districts)</span>
+          <span class="area-item">Scarborough</span>
+          <span class="area-item">North York</span>
+          <span class="area-item">Etobicoke</span>
+          <span class="area-item">Mississauga</span>
+          <span class="area-item">Brampton</span>
+          <span class="area-item">Markham</span>
+          <span class="area-item">Richmond Hill</span>
+          <span class="area-item">Vaughan</span>
+          <span class="area-item">Oakville</span>
+          <span class="area-item">Pickering</span>
+          <span class="area-item">Ajax</span>
+          <span class="area-item">Oshawa</span>
+          <span class="area-item">Kitchener / Waterloo</span>
+        </div>
+        <div class="map-embed" role="region" aria-label="Decora office location map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.1!2d-79.2811!3d43.7144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDQyJzUxLjgiTiA3OcKwMTYnNTIuMCJX!5e0!3m2!1sen!2sca!4v1"
+            width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Decora Building Restoration office location at 319 Comstock Rd, Scarborough">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT & QUOTE FORM ========== -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <p class="overline reveal">Get In Touch</p>
+    <h2 id="contact-heading" class="display display-md reveal reveal-delay-1">Request Your Free<br>Site Assessment.</h2>
+    <p style="color:var(--text-muted);margin-top:0.75rem;font-size:0.95rem;max-width:500px" class="reveal reveal-delay-2">
+      Fill in the form below or call us directly. We respond to all inquiries within one business day.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-info-wrapper reveal" style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div class="contact-info" style="gap:1.5rem">
+          <div class="contact-detail">
+            <span class="label">Phone</span>
+            <a href="tel:+14162857788">416-285-7788</a>
+            <span style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">Mon – Fri, 7:30am – 5:30pm</span>
+          </div>
+          <div class="contact-detail">
+            <span class="label">Email</span>
+            <a href="mailto:info@decorarestoration.com">info@decorarestoration.com</a>
+          </div>
+          <div class="contact-detail">
+            <span class="label">Office</span>
+            <span>319 Comstock Rd<br>Scarborough, ON M1L 2H3</span>
+          </div>
+          <div class="contact-detail">
+            <span class="label">Website</span>
+            <a href="https://decorarestoration.com" target="_blank" rel="noopener noreferrer">decorarestoration.com</a>
+          </div>
+        </div>
+
+        <div style="padding:2rem;border:1px solid var(--border);background:rgba(185,28,28,0.04);">
+          <p class="overline" style="margin-bottom:1rem">Why clients call us first</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem">
+            <li style="font-size:0.85rem;color:var(--text-secondary);display:flex;align-items:center;gap:0.75rem">
+              <span style="color:var(--gold);font-size:1.1rem" aria-hidden="true">✓</span> No-obligation site visit
+            </li>
+            <li style="font-size:0.85rem;color:var(--text-secondary);display:flex;align-items:center;gap:0.75rem">
+              <span style="color:var(--gold);font-size:1.1rem" aria-hidden="true">✓</span> Proposal in 5 days
+            </li>
+            <li style="font-size:0.85rem;color:var(--text-secondary);display:flex;align-items:center;gap:0.75rem">
+              <span style="color:var(--gold);font-size:1.1rem" aria-hidden="true">✓</span> Board-ready docs
+            </li>
+            <li style="font-size:0.85rem;color:var(--text-secondary);display:flex;align-items:center;gap:0.75rem">
+              <span style="color:var(--gold);font-size:1.1rem" aria-hidden="true">✓</span> Insured & licensed
+            </li>
+            <li style="font-size:0.85rem;color:var(--text-secondary);display:flex;align-items:center;gap:0.75rem">
+              <span style="color:var(--gold);font-size:1.1rem" aria-hidden="true">✓</span> Works with engineer
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <!-- START GHL EMBED -->
+        <iframe
+            src="https://api.leadconnectorhq.com/widget/form/c6PhTj3obI1V4iMwAUU5"
+            style="width:100%;border:none;border-radius:3px;min-height:580px;"
+            class="ghl-iframe"
+            scrolling="no"
+            id="inline-c6PhTj3obI1V4iMwAUU5" 
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Contact Us"
+            data-height="580"
+            data-layout-iframe-id="inline-c6PhTj3obI1V4iMwAUU5"
+            data-form-id="c6PhTj3obI1V4iMwAUU5"
+            title="Contact Us"
+        >
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        <!-- END GHL EMBED -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section id="final-cta" aria-labelledby="final-cta-heading">
+  <div class="container">
+    <p class="overline reveal">Ready to Restore?</p>
+    <h2 id="final-cta-heading" class="display display-lg reveal reveal-delay-1">
+      Your Building<br>Deserves Better<br><span class="gold-text">Than Waiting.</span>
+    </h2>
+    <p class="reveal reveal-delay-2">The best time to address building envelope issues was 5 years ago. The second best time is now — before one crack becomes a structural failure.</p>
+    <div class="cta-btns reveal reveal-delay-3">
+      <a href="tel:+14162857788" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.07a16 16 0 0 0 6.02 6.02l1.36-1.36a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 416-285-7788
+      </a>
+      <a href="#contact" class="btn-outline">Request Assessment Form →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;letter-spacing:0.08em">DECORA</span>
+          <span style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:block;margin-top:2px">Building Restoration Ltd</span>
+        </div>
+        <p class="footer-desc">Serving the Greater Toronto Area since 1990. Specialists in building envelope, balcony, masonry, and underground garage restoration for commercial clients, condo corporations, and municipal institutions.</p>
+        <a href="tel:+14162857788" style="color:var(--gold);text-decoration:none;font-size:1.1rem;font-weight:500">416-285-7788</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Building Envelope</a></li>
+          <li><a href="#services">Balcony Restoration</a></li>
+          <li><a href="#services">Masonry Repair</a></li>
+          <li><a href="#services">Parking Garage</a></li>
+          <li><a href="#services">Maintenance Programs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">Why Decora</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#testimonials">Client Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+14162857788">416-285-7788</a></li>
+          <li><a href="mailto:info@decorarestoration.com">info@decorarestoration.com</a></li>
+          <li><span style="color:var(--text-muted)">319 Comstock Rd<br>Scarborough, ON M1L 2H3</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Decora Building Restoration Ltd. All rights reserved.</p>
+      <p>Toronto's Restoration Authority Since 1990 · Scarborough, Ontario, Canada</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Nav scroll effect
+  var nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive: true});
+
+  // Reveal on scroll
+  var reveals = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  reveals.forEach(function(r){io.observe(r)});
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+        i.querySelector('.faq-a').style.maxHeight='0';
+        i.querySelector('.faq-a').style.paddingBottom='0';
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        var ans = item.querySelector('.faq-a');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var target = document.querySelector(a.getAttribute('href'));
+      if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}
+    });
+  });
+})();
+
+function handleSubmit(){
+  var name = document.getElementById('f-name').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var phone = document.getElementById('f-phone').value.trim();
+  if(!name || !email || !phone){
+    alert('Please fill in your name, email, and phone number to continue.');
+    return;
+  }
+  document.getElementById('quote-form-wrap').style.display='none';
+  document.getElementById('form-success').style.display='block';
+  document.getElementById('form-success').scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+
+    <!-- Chat Widget -->
+    <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69f07d5f2a45a437f24db049"></script>
+</body>
+</html>
