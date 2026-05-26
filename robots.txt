@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://decorarestoration.com/sitemap.xml
