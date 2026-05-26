@@ -147,7 +147,9 @@ nav.scrolled .nav-phone:hover{background:var(--gold-light);border-color:var(--go
 #services{background:var(--near-black)}
 .services-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:5rem}
 @media(max-width:768px){.services-header{grid-template-columns:1fr;gap:2rem}}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;background:transparent}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;background:transparent}
+@media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.services-grid{grid-template-columns:1fr}}
 .service-card{background:var(--gold);color:var(--charcoal);padding:3rem 2.5rem;transition:var(--transition);cursor:default;position:relative;overflow:hidden;border-radius:12px;box-shadow:0 15px 35px rgba(0,0,0,0.08)}
 .service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--charcoal);transition:width 0.5s ease}
 .service-card:hover::before{width:100%}
